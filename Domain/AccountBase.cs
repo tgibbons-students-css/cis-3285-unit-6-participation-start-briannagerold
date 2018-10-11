@@ -40,7 +40,7 @@ namespace Domain
 
         public void AddTransaction(decimal amount)
         {
-            if (amount > 0)
+            if (amount > 0) //only calculate reward points if it was a deposit and not a withdrawal
             {
                 RewardPoints += CalculateRewardPoints(amount);
             }
